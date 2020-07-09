@@ -6,13 +6,129 @@
     --bright-yellow: hsl(71, 73%, 54%);
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+     list-style: none;
+}
+
 
 html {
     height: 100vh;
 }
 
 body {
+    display: grid;
+    grid-template-rows: 1fr 100px;
     font-family: 'Karla', sans-serif;
     font-size: 16px;
+    height: 100vh;
+    color: var(--light-gray);
 }
+
+.l-main {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.c-card {
+    max-width: 800px;
+
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.1), 0px 0px 6px 1px rgba(0, 0, 0, 0.4);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "card__description card__description"
+        "card__price card__why-us";
+}
+
+
+.c-card__description {
+    grid-area: card__description;
+    padding: 40px;
+}
+
+.c-card__description__title {
+    font-size: 28px;
+    color: var(--cyan);
+}
+
+.c-card__description__subtitle {
+    font-size: 22px;
+    color: var(--bright-yellow);
+    margin: 20px 0;
+}
+
+.c-card__description__text {
+    color: var(--grayish-blue);
+    line-height: 26px;
+}
+
+.c-card__price {
+    grid-area: card__price;
+    background-color: var(--cyan);
+    padding: 40px;
+}
+
+.c-card__price__title {
+    margin-bottom: 20px;
+}
+
+.c-card__price__subtitle {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    color: var(--light-gray);
+}
+    .c-card__price__subtitle span {
+        font-size: 14px;
+        margin-left: 14px;
+        opacity: 0.5;
+        font-weight: 400;
+    }
+
+.c-card__price__text {
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.c-card__price__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bright-yellow);
+    height: 50px;
+    color: var(--light-gray);
+    font-weight: 700;
+    border-radius: 5px;
+
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1),
+                0px 3px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.c-card__why-us {
+    grid-area: card__why-us;
+    background-color: var(--cyan);
+    opacity: 0.8;
+}
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
