@@ -39,17 +39,16 @@ body {
     display: flex;
     margin: 0 auto;
     align-items: center;
+    padding: 20px;
 }
 
 .c-card {
-    max-width: 800px;
-
     border-radius: 5px;
     box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.1), 0px 0px 6px 1px rgba(0, 0, 0, 0.4);
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: 250px 1fr;
     grid-template-areas: 
         "card__description card__description"
         "card__price card__why-us";
@@ -58,23 +57,27 @@ body {
 
 .c-card__description {
     grid-area: card__description;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px
 }
 
 .c-card__description__title {
     font-size: 28px;
     color: var(--cyan);
+    margin-bottom: 30px;
 }
 
 .c-card__description__subtitle {
     font-size: 22px;
     color: var(--bright-yellow);
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .c-card__description__text {
     color: var(--grayish-blue);
     line-height: 26px;
+    margin-bottom: 20px;
 }
 
 .c-card__price {
@@ -83,15 +86,13 @@ body {
     padding: 40px;
 }
 
-.c-card__price__title {
-    margin-bottom: 20px;
-}
-
 .c-card__price__subtitle {
     font-size: 32px;
     display: flex;
     align-items: center;
     color: var(--light-gray);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
     .c-card__price__subtitle span {
         font-size: 14px;
@@ -103,7 +104,7 @@ body {
 .c-card__price__text {
     font-weight: 400;
     margin-top: 5px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .c-card__price__button {
@@ -123,12 +124,36 @@ body {
 .c-card__why-us {
     grid-area: card__why-us;
     background-color: var(--cyan);
+    opacity: 0.9;
+    padding: 40px;
+}
+
+.c-card__why-us__title {
+    margin-bottom: 20px;
+}
+
+.c-card__why-us__list {
+    line-height: 22px;
+    font-size: 14px;
     opacity: 0.8;
 }
 
+.l-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
 
+.l-footer_attribution {
+    font-size: 11px; text-align: center;
+}
 
-
-.attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+@media (max-width: 768px) {
+    .c-card {
+        display: flex;
+        flex-direction: column;
+    }
+}
