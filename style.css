@@ -84,6 +84,7 @@ body {
     grid-area: card__price;
     background-color: var(--cyan);
     padding: 40px;
+    border-bottom-left-radius: 5px;
 }
 
 .c-card__price__subtitle {
@@ -97,7 +98,7 @@ body {
     .c-card__price__subtitle span {
         font-size: 14px;
         margin-left: 14px;
-        opacity: 0.5;
+        opacity: 0.7;
         font-weight: 400;
     }
 
@@ -119,6 +120,13 @@ body {
 
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1),
                 0px 3px 5px 3px rgba(0, 0, 0, 0.2);
+                transition: background-color ease-in-out 500ms;
+    
+}
+
+.c-card__price__button:hover {
+    background-color: rgb(150, 179, 24);
+
 }
 
 .c-card__why-us {
@@ -126,6 +134,7 @@ body {
     background-color: var(--cyan);
     opacity: 0.9;
     padding: 40px;
+    border-bottom-right-radius: 5px;
 }
 
 .c-card__why-us__title {
@@ -135,7 +144,7 @@ body {
 .c-card__why-us__list {
     line-height: 22px;
     font-size: 14px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .l-footer {
@@ -143,17 +152,29 @@ body {
     align-items: center;
     justify-content: center;
     color: black;
+    padding: 20px;
 }
 
-.l-footer_attribution {
-    font-size: 11px; text-align: center;
+.l-footer__attribution__link {
+    color: hsl(228, 45%, 44%);
 }
 
-.attribution a { color: hsl(228, 45%, 44%); }
+.l-footer__attribution__link > img {
+    height: 22px;
+    width: 22px;
+}
 
 @media (max-width: 768px) {
     .c-card {
         display: flex;
         flex-direction: column;
     }
+
+    .c-card__why-us {
+        border-bottom-left-radius: 5px;
+    }
+
+    .c-card__price {
+        border-radius: 0;
+    } 
 }
