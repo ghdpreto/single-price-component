@@ -4,7 +4,7 @@
 
 ## Welcome! 👋
 
-[See it working] (https://single-price-component-omega.vercel.app/)
+[See it working](https://single-price-component-omega.vercel.app/)
 
 Thanks for checking out this front-end coding challenge.
 
